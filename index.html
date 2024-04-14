@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>
+    PetroSA
+   
+</title>
+<link rel="shortcut icon" href="assets1/images/PetroSAlogowhite (2).png">
+  <style>
+  /* CSS for text color */
+  .nav__links .link {
+    color: gray;
+  }
+</style>
+<style>
+  /* CSS for search box */
+  .search__box input[type="text"] {
+    color: gray; /* Text color */
+  }
+
+  .search__box input[type="text"]::placeholder {
+    color: gray; /* Placeholder text color */
+  }
+
+  .search__box .ri-search-line {
+    color: gray; /* Icon color */
+  }
+</style>
+
+</head>
+<body>
+
+  <?php
+  // Fetch the value of 'pid' parameter from the URL
+  $pid = isset($_GET['pid']) ? intval($_GET['pid']) : 0;
+  
+  // Ensure the value of 'pid' is within expected range
+  if ($pid === 1) {
+      // Include the 'signup.php' file if 'pid' is 1
+
+      include "login.php";
+  } else {
+      // Include the 'login.php' file for any other value of 'pid'
+      include "signup.php";
+  }
+  ?>
+  
+  
+  
+
+  <nav>
+<div class="nav__logo"><img src="assets/PetroSa Logo traced rec.png" alt="PetroSA Logo" style="width: 150px;"></div>
+
+
+    <ul class="nav__links">
+      <li class="link">Home</li>
+      <a href="login.php?$pid==1"><li class="link">Login</li></a>
+      <a href="signup.php?$pid==1"><li class="link">Register</li></a>
+      <li class="link">Contact Us</li>
+    </ul>
+    <div class="search__box">
+      <input type="text" placeholder="Search" />
+      <i class="ri-search-line"></i>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="container__left">
+      <div class="content">
+        <h1 style="color: #2A3989; font-size: 56px;">Registration</h1>
+        <h1 style="color: #2A3989; font-size: 56px;">And Applications</h1>  
+
+  
+<br>
+<div style="display: flex;">
+ <div class="white-frame rounded border border-dark d-flex justify-content-center align-items-center" style="margin-right: 10px; background-color: #FFCC05; border-radius: 15px; width: 250px; height: 90px; text-align: center;">
+    <a href="signup.php?$pid==1" class="flex-grow-1 overflow-hidden ms-3">
+        <div style="height: 100%; display: flex; align-items: center;">
+            <h4 class="fs-4 flex-grow-1 mb-0 text-center"><span class="counter-value" data-target="825">Click here For New Establishment</span></h4>
+        </div>
+    </a>
+</div>
+
+<div class="white-frame rounded border border-dark d-flex justify-content-center align-items-center" style="margin-right: 10px; background-color: #2A3989; border-radius: 15px; width: 250px; height: 90px; text-align: center;">
+    <a href="signup.php" class="flex-grow-1 overflow-hidden ms-3">
+        <div style="height: 100%; display: flex; align-items: center;">
+            <h4 class="fs-4 flex-grow-1 mb-0 text-center" style="color: white;"><span class="counter-value" data-target="825">Click here For Existing Establishment</span></h4>
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
+      </div>
+      <h style="color: #2A3989;"><b>Below are the required documents for applying for new franchises.</b></h>
+  <a href="assets/img/Application Requirements.pdf" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Application Requirements</a>
+  <a href="assets/img/required.pdf" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i>Required Documents</a>
+<a href="assets/img/Operator Responsibilities and Attributes.pdf" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Operator Responsibilities & Attributes</a>
+<a href="assets/img/Authorization.pdf" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Authorization To Perform Credit Assessment</a>
+<a href="assets/img/ComprehensiveBusinessPlanPetroSA.docx" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Comprehensive Business Plan Guide</a>
+<a href="assets/img/64ccc70364c71224236765.xlsx" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Financial Template For PetroSA Operations Plan</a>
+<a href="download.php?file=assets/img/62a6eb6ce7cbb716316469.docx" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Letter Of Intent</a>
+<a href="assets/img/Business partner letter.docx" target="_blank" class="btn btn-primary"><i class="ri-file-pdf-line"></i> Business Partner Entity Letter Template</a>
+
+
+    </div>
+    <div class="container__right">
+
+
+
+
+    </div>
+   <!--  <div class="bottom__tracker">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span> -->
+    </div>
+  </div>
+</body>
+</html>

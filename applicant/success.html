@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+<body>
+    <p id="success-message"></p>
+
+    <script>
+        // Get the success message from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get("message");
+
+        // Update the paragraph element with the success message
+        document.getElementById("success-message").innerText = JSON.parse(message);
+
+        // Redirect to dashboard
+        setTimeout(() => {
+            location.href = "dashboard.php";
+        }, 3000); // Redirect after 3 seconds
+    </script>
+</body>
+</html>

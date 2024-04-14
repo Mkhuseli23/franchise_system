@@ -1,0 +1,11 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Rewrite requests for /bank to /bank.php
+RewriteRule ^bank/?$ bank.php [L]
+
+# Rewrite requests for /bank/add to /bank.php?action=add
+RewriteRule ^bank/add/?$ bank.php?action=add [L]
+
+# Rewrite requests for /bank/edit/[id] to /bank.php?action=edit&id=[id]
+RewriteRule ^bank/edit/(\d+)/?$ bank.php?action=edit&id=$1 [L]
